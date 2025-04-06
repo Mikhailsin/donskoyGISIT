@@ -49,8 +49,8 @@ const MenuScreen = ({ navigation }) => {
                 </View>
                 <View style={styles.scrollContainer}>
                     <ScrollView
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
+                        vertical
+                        showsVerticalScrollIndicator={false}
                         contentContainerStyle={styles.buttonContainer}
                     >
                         <TouchableOpacity
@@ -119,14 +119,14 @@ const MenuScreen = ({ navigation }) => {
                     style={styles.icon4}
                     resizeMode="cover"
                 >
-                    <Text style={styles.buttonText1}>Новости о новоднениях</Text>
+                    <Text style={styles.buttonText1}>Новости о наводнениях</Text>
                 </ImageBackground>
             </TouchableOpacity>
 
             <View style={styles.scrollContainer}>
                 <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
+                    vertical
+                    showsVerticalScrollIndicator={false}
                     contentContainerStyle={styles.buttonContainer}
                 >
                     <TouchableOpacity
@@ -170,13 +170,6 @@ const MenuScreen = ({ navigation }) => {
                         <Text style={styles.buttonText}>Ещё</Text>
                     </TouchableOpacity>
                 </ScrollView>
-
-                <TouchableOpacity
-                    style={styles.recommendationButton}
-                    onPress={() => navigation.navigate("Recommendations")}
-                >
-                    <Text style={styles.recommendationText}>Подробнее</Text>
-                </TouchableOpacity>
             </View>
             <View style={styles.scrollContainer}></View>
         </SafeAreaView>
@@ -265,7 +258,7 @@ const MenuScreen = ({ navigation }) => {
                                     fontWeight: "bold",
                                 }}
                             >
-                                КАРТА
+                                ПОИСК
                             </Text>
                         </View>
                     ),
@@ -302,7 +295,7 @@ const MenuScreen = ({ navigation }) => {
                                     fontWeight: "bold",
                                 }}
                             >
-                                ГЕО
+                                КАРТА
                             </Text>
                         </View>
                     ),
@@ -338,7 +331,7 @@ const MenuScreen = ({ navigation }) => {
                                     fontWeight: "bold",
                                 }}
                             >
-                                ПРОФИЛЬ
+                                КАЛЕНДАРЬ
                             </Text>
                         </View>
                     ),
@@ -382,13 +375,13 @@ const MenuScreen = ({ navigation }) => {
         paddingBottom: 20,
     },
     buttonContainer: {
-        flexDirection: "row",
-        paddingHorizontal: 0,
+        flexDirection: "column",
+        paddingVertical: 0,
         alignItems: "",
     },
     categoryButton: {
-        width: 120,
-        height: 120,
+        width: 370,
+        height: 370,
         paddingHorizontal: 16,
         paddingVertical: 12,
         borderRadius: 20,

@@ -16,7 +16,7 @@ import {
 
 import { auth } from '../../firebase';
 
-import { useNavigation } from '@react-navigation/native'; // Оставьте только это для навигации
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
